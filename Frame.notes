@@ -1,0 +1,12 @@
+Frame
+#####
+
+Can be handled by 
+1) ID
+2) Index Number
+3) WebElement
+
+Step 1) Navigate to site
+Step 2) Check for the iFrame using size method 
+Step 3) Switch to frame using driver.switchTo().frame(WebElement);
+Step 4) Find element on which want to perfrom action 

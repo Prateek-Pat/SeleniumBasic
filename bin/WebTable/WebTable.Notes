@@ -1,0 +1,46 @@
+
+https://www.w3schools.com/html/html_tables.asp
+###############################################
+
+WebTables
+#########
+
+<tr> = Row
+<td> = Column
+
+DataTable consists of Following things
+#######################################
+
+1)table > 2)tbody > 3)tr > 4)td 
+###############################
+
+Note: All  [td] i.e column comes under [tr]
+    
+1) table
+<table id="customers">
+
+2) tbody
+<tbody><tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  
+3) tr = row
+<tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+
+3_1)  tr = row
+<tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+
+4) td = Column
+<td>Alfreds Futterkiste</td>
+<td>Maria Anders</td>  
+<td>Germany</td>

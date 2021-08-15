@@ -1,0 +1,19 @@
+
+Steps for Window handle
+#######################
+
+Method: driver.switchTo().window(partnId/ChildId); is used to get the child or paent window
+
+Three Main steps are 
+
+1) driver.getWindowHandles();
+2) Iterate windows
+3) driver.switchTo.window(parentId | ChildId)
+
+
+
+Step 1) Navigate to website : https://phptravels.com/demo/
+Step 2) Get title of Parent window using [driver.getTitle] method
+Step 3) Click on any element(which opens child window)
+Step 4) driver.getWindowHandles(); used and Iterate all the windows open
+Step 5) driver.switchTo.window(parentId | ChildId) to select required window

@@ -1,0 +1,14 @@
+
+Types of Assertions
+
+1) Hard Assertion
+2) Soft Assertion
+
+Comman Assertion Provided by TestNG
+
+1) AssertTrue
+2) AssertFalse
+3) AssertEquals
+4) AssertNotEquals
+5) AssertNull
+6) AssertNotNull

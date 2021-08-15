@@ -1,0 +1,52 @@
+
+Synchronisation
+###############
+
+1) Implicit wait
+2) Explicit wait
+3) Fluent wait
+
+There are two kinds of waits.
+1. Implicit wait - used to set the default waiting time throughout the program or globally applicable
+2. Explicit wait - used to set the waiting time for a particular instance only
+
+1)Implicit wait:
+################
+
+The Implicit Wait in Selenium is used to tell the web driver to wait for a certain amount of time 
+before it throws a "No Such Element Exception".  
+				
+Syntax:
+#######
+
+ 	driver.manage().timeouts().implicitlyWait(TimeOut, TimeUnit.SECONDS);
+
+Consider Following Code:
+######################### 
+
+	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+	
+	
+2)Explicit Wait: [WebDriverWait & Fluent Wait]
+##############################################
+
+The Explicit Wait in Selenium is used to tell the Web Driver to wait for certain conditions (Expected Conditions)
+or maximum time exceeded before throwing "ElementNotVisibleException"
+
+Syntax:
+######
+
+	WebDriverWait wait = new WebDriverWait(WebDriverRefrence,TimeOut);
+	
+Consider Following Code:
+######################### 
+
+	WebDriverWait wait=new WebDriverWait(driver, 20);
+	
+	// explicit wait - to wait for the compose button to be click-able
+	
+	WebDriverWait wait = new WebDriverWait(driver,30);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'COMPOSE')]")));
+	
+	
+Notes: WebDriverWait & Fluent wait are the classes, which implements Wait Intrface

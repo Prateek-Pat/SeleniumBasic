@@ -1,0 +1,15 @@
+
+DropDown
+########
+
+1)Static Dropdown-Select: 
+[Comment]: Handling static drop down using SELECT class
+
+2)Dynamic DropDown with indexes :
+[Comment]: Handling dynamic dropd down using hardcoded index value
+
+3)parent Child Relation X-path:
+[Comment]: Handling dynamic dropd down using ParentChild relation without hardcoding the index values
+
+4)Auto suggestive Drop Down:
+[Comment]: Handling Autosuggestive drop down 

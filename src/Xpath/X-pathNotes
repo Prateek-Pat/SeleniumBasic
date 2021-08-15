@@ -1,0 +1,99 @@
+
+X-path
+#######
+ 	
+Customize Xpath
+################
+
+XPath contains the path of the element situated at the web page. Standard syntax for creating XPath is.
+
+Xpath=//tagname[@attribute='value']
+
+Xpath=//tagname[contains(@attribute,'value')] 
+[Comment]= used where dynamic value is used
+
+
+url: Fb.com
+++++++++++++
+
+UserName
+++++++++
+<input type="text" class="inputtext _55r1 _6luy" name="email" 
+id="email" data-testid="royal_email" 
+placeholder="Email address or phone number" autofocus="1" aria-label="Email address or phone number">
+
+
+	1) // : Select current node.
+	2) Tagname: Tagname of the particular node.
+	3) @: Select attribute.
+	4) Attribute: Attribute name of the node.
+	5) Value: Value of the attribute.
+	
+	
+1) Basic Xpath
+##############
+
+Xpath=  //input[@type='text']				
+Xpath=	//label[@id='message23']
+Xpath=	//input[@value='RESET']
+Xpath=  //*[@class='barone']
+Xpath=  //a[@href='http://demo.guru99.com/']
+Xpath=  //img[@src='//cdn.guru99.com/images/home/java.png']	
+
+2) Contains()
+++++++++++++++
+
+Contains() is a method used in XPath expression. It is used when the value of any attribute changes dynamically,
+
+url: https://www.guru99.com/
+
+<a target="_top" href="/soapui-tutorial.html" title="SoapUI">SoapUI</a>
+
+//a[contains(text(),'SoapUI')]
+[Comment]: finding the xpath usng text SoapUI
+
+//a[contains(@title,'SoapUI')]
+[Comment]: finding the xpath usng attribute & value
+	
+//input[@id='email'] or //input[@name='email'] or //*input[@name='email']
+
+//img[@src='/images/home/machine_learning.png']
+<img src="/images/home/machine_learning.png">
+
+
+url: https://freecrm.co.in/
+++++++++++++++++++++++++++++
+
+1)[Links: SignUp]	
+<a href="https://register.freecrm.com/register/">Sign Up</a>
+
+//a[text()='Sign Up']
+//a[contains(text(),'Sign Up')]
+
+2)[Image: crm itunes]
+<img src="/images/Itunes.png" style="max-width: 32px" alt="free crm itunes app" title="free crm app for itunes">
+
+//img[@title='free crm app for itunes']
+//img[contains(@title,'free crm app for itunes')]
+
+3)[Button: login]
+<a href="https://ui.freecrm.com" class="btn btn-primary btn-xs-2 btn-shadow btn-rect btn-icon btn-icon-left"><span class="icon icon-xs mdi-chart-bar"></span><span>Log In</span></a>
+
+//a[contains(@class,'btn-primary btn-xs-2')]
+
+url: https://www.guru99.com/
++++++++++++++++++++++++++++++
+
+4)[Parent traversing: Search]
+<input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id2" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; background: url(&quot;https://www.google.com/cse/static/images/1x/en/branding.png&quot;) left center no-repeat rgb(255, 255, 255); outline: none;">
+
+//input[@title='search']//parent::td[@id='gs_tti51']
+
+
+3) Using OR & AND:
+++++++++++++++++++
+
+In AND expression, two conditions are used, both conditions should be true to find the element. It fails to find element if any one condition is false.
+
+Xpath=//input[@type='submit' and @name='btnLogin']
+
