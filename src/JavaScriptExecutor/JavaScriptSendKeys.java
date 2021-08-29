@@ -23,10 +23,9 @@ public class JavaScriptSendKeys extends JavaScriptUtilities {
 		
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		
-		WebElement checkBox = driver.findElement(By.className("inputs"));	
+		//WebElement TextBox = driver.findElement(By.className("inputs"));
+		WebElement textbox = driver.findElement(By.xpath("//input[@id='name']"));
 		
-		JavaScriptUtilities.sendKeys(driver);
-		
+		JavaScriptUtilities.sendKeys2(driver, textbox);
 	}
-	
 }
