@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class JavaScriptImplementation extends JavaScriptUtilities{
+public class JavaScriptClickElement extends JavaScriptUtilities{
 	
 public  static WebDriver driver;
 	
@@ -28,5 +28,4 @@ public static void main(String[] args) {
 		JavaScriptUtilities.clickElementByJS(driver, we);
 		driver.close();
 	}
-	
 }

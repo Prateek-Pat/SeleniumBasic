@@ -13,5 +13,11 @@ public class JavaScriptUtilities {
 		js.executeScript("arguments[0].click();", element);
 			
 		}
-	
+		
+	public static void scrollInToView(WebDriver driver, WebElement element){
+		JavascriptExecutor js = ((JavascriptExecutor)driver);
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+		
+		
 	}
+}
