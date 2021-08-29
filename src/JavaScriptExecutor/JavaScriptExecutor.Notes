@@ -1,0 +1,15 @@
+
+Following Action using JavaScriptExeuctor
+++++++++++++++++++++++++++++++++++++++++++++
+
+
+Send Text 
+
+[java]
+js.executeScript(“document.getElementByID(‘element id ’).value = ‘xyz’;”);
+[/java]
+
+Click Element 
+
+js.executeScript("arguments[0].click();", element);
+

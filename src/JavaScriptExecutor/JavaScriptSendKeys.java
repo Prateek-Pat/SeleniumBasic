@@ -6,9 +6,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class JavaScriptSendKeys {
+public class JavaScriptSendKeys extends JavaScriptUtilities {
 	
 	public static WebDriver driver;
 	
@@ -22,7 +23,10 @@ public class JavaScriptSendKeys {
 		
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		
-		driver.findElement(By.xpath("//input[@name='enter-name']"));
+		WebElement checkBox = driver.findElement(By.className("inputs"));	
+		
+		JavaScriptUtilities.sendKeys(driver);
 		
 	}
+	
 }

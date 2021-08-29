@@ -32,11 +32,19 @@ public class JavaScriptUtilities {
 		js.executeScript("window.scrollBy(0,700)" );
 	}
 			
-	
 	public static void scrollTop(WebDriver driver){
 		
 		JavascriptExecutor js = ((JavascriptExecutor)driver);
 		js.executeScript("document.querySelector('.tableFixHead').scrollTop=5000");
 	}
+	
+	public static void sendKeys(WebDriver driver){
+		
+		JavascriptExecutor js = ((JavascriptExecutor)driver);
+		js.executeScript("document.getElementById('name').value='MaxPayne;'");
+		//
+	}
+	
+	
 }
 
