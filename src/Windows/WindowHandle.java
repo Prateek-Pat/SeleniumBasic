@@ -31,6 +31,7 @@ public class WindowHandle {
 		String partnId = it.next();
 		
 		driver.switchTo().window(partnId);
+		System.out.println(partnId);
 		System.out.println("Below is Parent window title");
 		System.out.println(driver.getTitle());
 		
@@ -40,6 +41,8 @@ public class WindowHandle {
 		System.out.println(driver.getTitle());
 		driver.findElement(By.xpath("//a[contains(text(),'Flights')]"));
 		
+		
+		driver.switchTo().defaultContent();
 		driver.switchTo().window(partnId);
 		System.out.println(driver.getTitle());	
 	}
